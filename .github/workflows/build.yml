@@ -25,7 +25,7 @@ jobs:
       run: dotnet build d.a.r.k. cheat.sln --configuration Release
 
     - name: Upload DLL artifacts
-      uses: actions/upload-artifact@4.6.1
+      uses: actions/upload-artifact@v4.6.1
       with:
         name: dll-artifacts
         path: |
