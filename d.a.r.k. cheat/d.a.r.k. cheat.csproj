@@ -114,6 +114,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Security.Cryptography.Algorithms" />
     <Reference Include="Unity.AI.Navigation">
       <HintPath>..\..\..\R.E.P.O\REPO_Data\Managed\Unity.AI.Navigation.dll</HintPath>
     </Reference>
