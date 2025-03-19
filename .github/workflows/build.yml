@@ -1,0 +1,32 @@
+name: Build and Upload DLL Artifacts
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Build solution
+      run: dotnet build d.a.r.k. cheat.sln --configuration Release
+
+    - name: Upload DLL artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dll-artifacts
+        path: |
+          **/bin/Release/*.dll
